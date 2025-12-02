@@ -2,7 +2,7 @@
 Simulación de restaurante con procesos en Java
 Este proyecto simula el flujo de pedidos de un restaurante usando tres procesos Java (Cliente, Cocinero, Repartidor) coordinados por un proceso principal (GestorRestaurante) mediante tuberías (pipes) y hebras.
 
-Descripción general
+## Descripción general
 Flujo básico:
 
 Cliente genera pedidos: Pedido-1, Pedido-2, … y al final envía FIN.
@@ -24,7 +24,7 @@ Imprime Pedido-i cada 500 ms.
 
 Al final imprime FIN.
 
-Cocinero.java
+## Cocinero.java
 
 Lee líneas de System.in.
 
@@ -32,7 +32,7 @@ Si la línea es FIN: imprime FIN y termina.
 
 En otro caso: añade (listo) y la imprime, esperando 1 s entre pedidos.
 
-Repartidor.java
+## Repartidor.java
 
 Lee líneas de System.in.
 
@@ -40,7 +40,7 @@ Si es FIN: termina.
 
 Si no: imprime <pedido> -> entregado y espera 800 ms.
 
-GestorRestaurante.java
+## GestorRestaurante.java
 
 Lanza los procesos Cliente, Cocinero y Repartidor con ProcessBuilder.
 
@@ -56,7 +56,7 @@ hiloRepartidorSalida: muestra la salida del Repartidor.
 
 Espera a que terminen los procesos y muestra sus códigos de salida.
 
-Requisitos
+## Requisitos
 Java 8 o superior.
 
 Todos los .java en el mismo directorio (o correctamente empaquetados).
@@ -66,7 +66,7 @@ En el directorio donde están los archivos:
 
 bash
 javac Cliente.java Cocinero.java Repartidor.java GestorRestaurante.java
-Ejecución
+## Ejecución
 Ejecutar el gestor:
 
 bash
